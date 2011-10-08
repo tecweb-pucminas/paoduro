@@ -30,7 +30,7 @@
 			</div>
 		</form>	
 		<div id="footer">
-			Pão Duro - Todos os direitos reservados
+			<a href=Quemsomos.php> Pão Duro - Todos os direitos reservados </a>
 		</div>
 	</div>
 	<img id="bottom" src="images/bottom.png" alt="">

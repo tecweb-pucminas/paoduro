@@ -112,7 +112,7 @@
 			</ul>
 		</form>	
 		<div id="footer">
-			<a href=quemsomos.html> Pão Duro - Todos os direitos reservados </a>
+			<a href=Quemsomos.php> Pão Duro - Todos os direitos reservados </a>
 		</div>
 	</div>
 	<img id="bottom" src="images/bottom.png" alt="">
