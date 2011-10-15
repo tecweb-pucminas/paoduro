@@ -8,7 +8,6 @@ and open the template in the editor.
     <title></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <style type="text/css" >
-        
 #map{
    width: 100px;
    height: 100px;
@@ -48,15 +47,58 @@ and open the template in the editor.
 #posit h4 {
     background: url("../assets/images/bord_cima.png") no-repeat scroll 0 0 transparent;
     font-family: "lucida sans unicode";
-    font-size: 79%;
+    font-size: 82%;
     height: 19px;
-    padding: 5px;
+    padding: 7px;
     width: 226px;
+}
+#foto_comer h4 {
+    background: url("../assets/images/bord_cima.png") no-repeat scroll 0 0 transparent;
+    font-family: "lucida sans unicode";
+    font-size: 82%;
+    height: 19px;
+    padding: 7px;
+    width: 226px;
+}
+#foto_comer{
+    height: 45%;
+    padding: 0 0 43px 0;
+    width: 22%;
+}
+#fun{
+    background: url("../assets/images/bord_menu.png") no-repeat scroll 0 0 transparent;
+    font-family: "lucida sans unicode";
+    font-size: 78%;
+    height: 24px;
+    margin: 0 0 6px -2px;
+    padding: 1px 10px 4px 9px;
+    text-align: center;
+    text-transform: lowercase;
+    width: 153px;
+    text-transform: lowercase;
+    text-decoration:  none;
+    text-align: left;
+    color: black;
+}
+#min_foto{
+    height: 18%;
+    width: 176%;
 }
     </style>
   </head>
   <body>
-      
+      <div id="foto_comer">
+          <h4>Comerciantes mais ativos</h4>
+          <div id="min_foto">
+          <a href="#"><img src="../assets/images/foto_1.png"></a>
+          <a href="#"><img src="../assets/images/foto_2.png"></a>
+          <a href="#"><img src="../assets/images/foto_3.png"></a>
+          <a href="#"><img src="../assets/images/foto_4.png"></a>
+          <a href="#"><img src="../assets/images/foto_5.png"></a>
+          </div>
+          <p> todos os direitos reservados estamos pesquisando</p>
+          <p id="fun">Procurar Comerciantes</p>
+      </div>
       <div  id="map">
           <img id="map_center" src="../assets/images/mapa_centro.jpg">
       </div>
