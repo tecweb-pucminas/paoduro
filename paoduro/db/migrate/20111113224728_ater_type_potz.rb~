@@ -1,0 +1,9 @@
+class AterTypePotz < ActiveRecord::Migration
+  def up
+    change_column :potzs, :cupom, :string
+  end
+
+  def down
+    change_column :potzs, :cupom, :integer
+  end
+end

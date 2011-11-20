@@ -1,0 +1,13 @@
+class Potze < ActiveRecord::Base
+
+  belongs_to :user
+  
+  after_validation :validate_digit
+  
+  def validate_digit
+
+
+  end
+  
+end
+

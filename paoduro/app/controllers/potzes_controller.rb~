@@ -1,0 +1,93 @@
+class PotzesController < ApplicationController
+  # GET /potzes
+  # GET /potzes.json
+  def index
+    @potzes = Potze.where("user_id = ?", current_user.id);
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @potzes }
+    end
+  end
+
+  # GET /potzes/1
+  # GET /potzes/1.json
+  def show
+    @potze = Potze.find(params[:id])
+
+    @totalAcumulado = 0
+     
+        
+    Potze.where("user_id = ?", current_user.id).each do |item|
+        
+        @totalAcumulado = @totalAcumulado + item.cupom[0..2].to_i    
+    
+    end
+    
+    
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render :json => @potze }
+    end
+  end
+
+  # GET /potzes/new
+  # GET /potzes/new.json
+  def new
+    @potze = Potze.new
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render :json => @potze }
+    end
+  end
+
+  # GET /potzes/1/edit
+  def edit
+    @potze = Potze.find(params[:id])
+  end
+
+  # POST /potzes
+  # POST /potzes.json
+  def create
+    @potze = Potze.new(params[:potze])
+    @potze.user_id = current_user.id
+    respond_to do |format|
+      if @potze.save
+        format.html { redirect_to @potze, :notice => 'Potze was successfully created.' }
+        format.json { render :json => @potze, :status => :created, :location => @potze }
+      else
+        format.html { render :action => "new" }
+        format.json { render :json => @potze.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
+
+  # PUT /potzes/1
+  # PUT /potzes/1.json
+  def update
+    @potze = Potze.find(params[:id])
+
+    respond_to do |format|
+      if @potze.update_attributes(params[:potze])
+        format.html { redirect_to @potze, :notice => 'Potze was successfully updated.' }
+        format.json { head :ok }
+      else
+        format.html { render :action => "edit" }
+        format.json { render :json => @potze.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
+
+  # DELETE /potzes/1
+  # DELETE /potzes/1.json
+  def destroy
+    @potze = Potze.find(params[:id])
+    @potze.destroy
+
+    respond_to do |format|
+      format.html { redirect_to potzes_url }
+      format.json { head :ok }
+    end
+  end
+end
