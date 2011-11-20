@@ -25,10 +25,10 @@
         <div class="container">
          <%= link_to 'Pão duro', root_path, :class => "brand" %>
           <ul class="nav">
-            <li class="<%= controller_path == 'welcome' ? 'active' : '' %>"><%= link_to 'Início', root_path %></li>
-            <li><%= link_to 'Compras', root_path %></li>
-            <li ><%= link_to 'Vendas', new_potze_path %></li>
-            <li class="<%= controller_path == 'potzes' ? 'active' : '' %>"><%= link_to 'Troque Potz', new_potze_path  %></li>
+          <li class="<%= controller_path == 'welcome' ? 'active' : '' %>"><%= link_to 'Início', root_path %></li>
+          <li><a href="#" data-controls-modal="modal-from-dom-compra" data-backdrop="true" data-keyboard="true">Compras</a></li>
+          <li><a href="#" data-controls-modal="modal-from-dom-venda" data-backdrop="true" data-keyboard="true">Vendas</a></li>
+          <li class="<%= controller_path == 'potzes' ? 'active' : '' %>"><%= link_to 'Troque Potz', new_potze_path  %></li>
           </ul>
           <form action="">
              <input type="text" style="width:310px" placeholder="procure por vendedores, clientes ou produtos">
@@ -44,7 +44,7 @@
           <div class="row">
           <div class="span3">
             <div id="perfil">
-                <img id="img_perfil" src="http://placehold.it/50x50"/>
+                <img id="img_perfil" src="<%=asset_path 'barack-obama-child-6.jpg'%>" width="86" height="106"/>
                 <p><b>Username<br/> usernames </b><br/>
                     <a href="#">Editar meu perfil</a>
                 </p>
@@ -83,7 +83,6 @@
             <h2>Atualizações<small> suas compras</small></h2>
                 <%= yield %>
             <div id="rodape">
-
                  <a id="link-compra" href="#">compras anteriores</a>
                  <a id="link-editar" href="#">editar opcoes</a>
             </div>
@@ -124,5 +123,32 @@
         </div>
       </div>
     </div> <!-- /container -->
+      <!-- sample modal content -->
+      <div id="modal-from-dom-compra" class="modal hide fade">
+        <div class="modal-header">
+          <a href="#" class="close">&times;</a>
+          <h3>Realizando uma compra</h3>
+        </div>
+        <div class="modal-body">
+          <p>One fine body…</p>
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="btn primary">Confirmar</a>
+          <a href="#" class="btn secondary">Cancelar</a>
+        </div>
+      </div>
+            <div id="modal-from-dom-venda" class="modal hide fade">
+        <div class="modal-header">
+          <a href="#" class="close">&times;</a>
+          <h3>Realizando vendas</h3>
+        </div>
+        <div class="modal-body">
+          <p>One fine body…</p>
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="btn primary">Confirmar</a>
+          <a href="#" class="btn secondary">Cancela</a>
+        </div>
+      </div>
   </body>
 </html>

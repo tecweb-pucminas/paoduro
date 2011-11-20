@@ -2,7 +2,7 @@ class Potze < ActiveRecord::Base
 
   belongs_to :user
 
-  validates :cupom, :user, :presence => {:message => " não pode ser branco"}
+  #validates :cupom, :user, :presence => {:message => " não pode ser branco"} 
   
   validates :cupom, :length =>  { :is => 11 , :message => "tamanho fora dos limites" },
                     :format =>  { :with => /\d{3}\d{6}-\d{1}/,  :message => " esta no formato incorreto. Formato: [ 999123456-0]"}

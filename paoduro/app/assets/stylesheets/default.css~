@@ -61,12 +61,12 @@ body {
 /* taigrom */
 #caixa
 {
-    border-radius: 4px 4px 4px 4px;
-    box-shadow: 3px 3px 3px 3px gray;
-    float: left;
-    height: 126px;
-    position: relative;
-    margin-top: 20px;
+border-radius: 4px 4px 4px 4px;
+box-shadow: 3px 3px 3px 3px gray;
+float: left;
+height: 150px;
+position: relative;
+margin-top: 20px;
 }
 #sub-caixa1
 {
@@ -137,17 +137,17 @@ body {
 }
 #cancelar
 {
-    margin-left: 36px;
-    margin-top: 38px;
-    padding: 7px;
+margin-left: 30px;
+margin-top: 56px;
+padding: 7px;
 }
 #foto
 {
-    border: 0 none;
-    float: left;
-    left: 43px;
-    position: relative;
-    top: 17px;
+border: 0 none;
+float: left;
+left: 36px;
+position: relative;
+top: 28px;
 }
 #like
 {
@@ -276,6 +276,5 @@ body {
     width: 229px;
 }
 footer{
-element.style {
 width: 111%;
 }
