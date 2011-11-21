@@ -1,0 +1,28 @@
+<%= form_for(@produto, :html => {:class => 'form-stacked'}) do |f| %>
+  <% if @produto.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@produto.errors.count, "error") %> prohibited this produto from being saved:</h2>
+
+      <ul>
+      <% @produto.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :descricao %><br />
+    <%= f.text_field :descricao %>
+  </div>
+  <div class="field">
+    <%= f.label :preco %><br />
+    <%= f.text_field :preco %>
+  </div>
+  <div class="field">
+    <%= f.label :foto %><br />
+    <%= f.text_field :foto %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Salvar', :class => 'btn primary' %> <%= link_to 'Cancelar', produtos_path, :class => 'btn' %>
+  </div>
+<% end %>

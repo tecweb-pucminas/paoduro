@@ -1,0 +1,292 @@
+/*
+    Document   : default
+    Created on : Oct 15, 2011, 8:17:12 PM
+    Author     : Jefferson
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/*
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+/* Override some defaults */
+html, body {
+    background-color: #eee;
+}
+body {
+    padding-top: 40px; /* 40px to make the container go all the way to the bottom of the topbar */
+}
+.container > footer p {
+    text-align: center; /* center align it with the container */
+}
+.container {
+    width: 985px; /* downsize our container to make the content feel a bit tighter and more cohesive. NOTE: this removes two full columns from the grid, meaning you only go to 14 columns and not 16. */
+}
+
+/* The white background content wrapper */
+.content {
+    background-color: #fff;
+    padding: 20px;
+    margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+    box-shadow: 0 1px 2px rgba(0,0,0,.15);
+}
+.content .span9{
+    padding-bottom: 47px;
+}
+/* Styles you shouldn't keep as they are for displaying this base example only */
+.content .span9,
+.content .span3, .content .span2 {
+    min-height: 500px;
+}
+.content .span9, .span9 + .span2{
+    border-left: 1px solid #eee;
+    padding-left: 19px;
+}
+
+.topbar .btn {
+    border: 0;
+}
+.content .span9{
+    border: 1px solid #eee;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+.span9 > h2{
+    margin-top: 10px;
+}
+/* taigrom */
+#caixa
+{
+
+border-radius: 4px 4px 4px 4px;
+box-shadow: 0.9px 0.9px 6px 0.9px gray;
+float: left;
+height: 150px;
+position: relative;
+margin-top: 20px;
+}
+#sub-caixa1
+{
+    border-right: 2px solid gray;
+    float: left;
+    height: 95px;
+    left: 20px;
+    position: relative;
+    top: 17px;
+    width: 369px;
+}
+#sub-caixa2
+{
+    float: left;
+    height: 125px;
+    position: relative;
+    width: 106px;
+}
+#caixa p, #titulo, #conteudo, #like
+{
+    margin: 0;
+    padding: 0;
+    font-family: "lucida unicode";
+    font-size: 17px;
+    line-height: 18px;
+    margin-bottom: 9px;
+}
+#titulo
+{
+    font-weight: bold;
+}
+#conteudo
+{
+    margin-right: 5px;
+}
+#rodape
+{
+    background-color: #D5E3D2;
+    border: 1px solid #98B692;
+    height: 30px;
+    position: relative;
+    width: 475px;
+    clear: both;
+    top: 35px;
+}
+#link-compra
+{
+    float: left;
+    position: relative;
+    top: 5px;
+    text-decoration: none;
+    left: 10px;
+}
+#link-editar
+{
+    float: right;
+    position: relative;
+    top: 5px;
+    text-decoration: none;
+    right: 10px;
+}
+#preco
+{
+    float: left;
+    margin-left: 283px;
+    margin-top: -28px;
+    padding: 7px;
+}
+#cancelar
+{
+margin-left: 30px;
+margin-top: 56px;
+padding: 7px;
+}
+#foto
+{
+border: 0 none;
+float: left;
+left: 36px;
+position: relative;
+top: 28px;
+}
+#like
+{
+    float: left;
+    left: -5px;
+    position: relative;
+    top: 8px;
+}
+#perfil
+{
+    position: relative;
+    width: 148px;
+}
+#img_perfil
+{
+    position: relative;
+    float: left;
+    margin-right: 6px;
+    margin-bottom:11px;
+}
+.itens_horizontal
+{
+    float: left;
+    margin-left: 42px;
+    margin-top: -18px;
+}
+#borda
+{
+    position: relative;
+    top: -8px;
+    width: 477px;
+    left: 30px;
+    border-color: #eee;
+    float: left;
+}
+#compras
+{
+    margin-top: 28px;
+}
+#sidebar li:hover
+{
+    background-color:ghostwhite;
+    cursor: pointer;
+}
+/* Fim taigrom */
+/* Inicio clebson */
+#map{
+   width: 100px;
+   height: 100px;
+   position: absolute;
+   top: 30%;
+   left: 33%;
+   margin-top: -50px;
+   margin-left: -50px;
+
+}
+#map_center{
+    padding: 1px 0 50px 0;
+
+}
+#posit a:link, #posit a:visited{
+    background: url("../images/bord_menu.png") no-repeat scroll 0 0 transparent;
+    font-family: "lucida sans unicode";
+    font-size: 78%;
+    height: 24px;
+    padding: 1px 10px 4px 9px;
+    text-align: center;
+    text-transform: lowercase;
+    width: 153px;
+    border: 1px solid #98B692;
+    text-transform: lowercase;
+    text-decoration:  none;
+    color: black;
+}
+#posit img{
+    clear: both;
+    margin-bottom: 15px;
+    border: 1px solid silver;
+}
+#posit{
+    width:238px;
+}
+
+#posit h4 {
+    background: url("../images/bord_cima.png") no-repeat scroll 0 0 transparent;
+    font-family: "lucida sans unicode";
+    font-size: 82%;
+    height: 19px;
+    padding: 7px;
+    width: 226px;
+    line-height: 18px;
+}
+#foto_comer h4 {
+    background: url("../images/bord_cima.png") no-repeat scroll 0 0 transparent;
+    font-family: "lucida sans unicode";
+    font-size: 82%;
+    height: 19px;
+    padding: 7px;
+    width: 226px;
+    line-height: 18px;
+}
+#foto_comer{
+    height: 45%;
+    width: 100%;
+}
+#fun{
+    background: url("../images/bord_menu.png") no-repeat scroll 0 0 transparent;
+    font-family: "lucida sans unicode";
+    font-size: 78%;
+    height: 24px;
+    margin: 0 0 6px 0;
+    padding: 1px 10px 4px 9px;
+    text-align: center;
+    text-transform: lowercase;
+    width: 153px;
+    text-transform: lowercase;
+    text-decoration:  none;
+    text-align: left;
+    color: black;
+}
+#min_foto{
+    height: auto;
+    width: 213px;
+}
+#min_foto + p{
+    width: 229px;
+}
+footer{
+width: 111%;
+}
+
+ul {
+list-style-type: none;
+}
+
+ul, ol {
+margin: 0 0 18px 2px;
+}
+table {
+width: 96%;
+}

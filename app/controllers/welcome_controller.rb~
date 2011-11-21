@@ -1,0 +1,14 @@
+class WelcomeController < ApplicationController
+
+   def index
+
+    @compras = Compra.where('cliente =?', current_user.id)
+
+   end
+
+   def out
+
+
+   end
+
+end

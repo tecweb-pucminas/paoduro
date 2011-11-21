@@ -1,0 +1,7 @@
+class RegistrationsController < Devise::RegistrationsController
+  layout 'login'
+  
+  def create
+    super
+  end
+end

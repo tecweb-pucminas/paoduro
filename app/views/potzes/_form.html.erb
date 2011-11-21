@@ -1,0 +1,21 @@
+<%= form_for(@potze , :html => { :class => 'form-stacked' } ) do |f| %>
+  <% if @potze.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@potze.errors.count, "error") %> prohibited this potze from being saved:</h2>
+
+      <ul>
+      <% @potze.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cupom %><br />
+    <%= f.text_field :cupom %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Trocar',:class => 'btn primary' %>
+  </div>
+<% end %>

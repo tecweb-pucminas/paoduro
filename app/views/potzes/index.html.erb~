@@ -1,0 +1,18 @@
+<table class="zebra-striped"  style="width:97%">
+<thead>
+  <tr>
+    <th style="width:90%">Cupom</th>
+    <th>Quantidade</th>
+  </tr>
+</thead>
+<tbody>
+<% @potzes.each do |potze| %>
+  <tr>
+    <td><%= potze.cupom %></td>
+        <td><%= potze.cupom[0..2].to_s %></td>
+  </tr>
+<% end %>
+</tbody>
+</table>
+<%= link_to 'Troque Potz', new_potze_path %>
+<% content_for :titulo, :partial => 'titulo' %>

@@ -1,0 +1,37 @@
+<%= form_for(@compra, :html => {:class => 'form-stacked'}) do |f| %>
+  <% if @compra.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@compra.errors.count, "error") %> prohibited this compra from being saved:</h2>
+
+      <ul>
+      <% @compra.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<table class="zebra-striped">
+ <thead>
+  <tr>
+    <th>Foto</th>
+    <th>Descricao</th>
+    <th>Preco</th>
+    <th c>Comprar</th>
+  </tr>
+</thead>
+ <tbody>
+<% @produtos.each do |produto| %>
+  <tr>
+    <td><%= image_tag produto.foto, :width => '64px' %></td>
+    <td><p>Por: <%= produto.user.nome %></p><%= link_to produto.descricao, produto %></td>
+    <td><%= produto.preco %></td>
+    <td style="text-align:center"><%= check_box_tag "produto_id[]", produto.id %></td>
+  </tr>
+<% end %>
+ </tbody>
+</table>
+  <div class="actions">
+    <%= f.submit 'Salvar', :class => 'btn primary'%> <%= link_to 'Voltar', compras_path, :class => 'btn' %>
+  </div>
+<% end %>

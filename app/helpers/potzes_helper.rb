@@ -1,0 +1,2 @@
+module PotzesHelper
+end
