@@ -1,9 +1,0 @@
-class UsersController <  Devise::SessionsController
-
-  layout 'login'
-  
-  def sign_up
-      super
-  end 
-  
-end

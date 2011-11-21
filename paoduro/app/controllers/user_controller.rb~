@@ -1,8 +1,0 @@
-class User::SessionsController < Devise::SessionsController
-
-    def sign_in
-    
-        render => { :nothing => true }
-    end
-
-end
