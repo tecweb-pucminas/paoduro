@@ -1,0 +1,34 @@
+<% @compras.each do |compra| %>
+<div class="borda" id="caixa">
+    <div id="sub-caixa1">
+        <p id="titulo">Comprei com o (a) <%= compra.user.nome %></p>
+        <p id="conteudo">
+            <%= compra.produto.descricao%>
+        </p>
+
+    </div>
+    <div id="sub-caixa2">
+        <img id="foto" src=" <%= compra.produto.foto%>" width="62px">
+        <a style="color:#000;" id="cancelar" class="btn success" href="#">R$  <%= compra.produto.preco%></a>
+        <!-- <a style="color:#000;" id="cancelar" class="btn danger" href="#">Cancelar</a> -->
+    </div>
+ </div>
+<% end %>
+<% @vendas.each do |vendas| %>
+<div class="borda" id="caixa">
+    <div id="sub-caixa1">
+        <p id="titulo">Você vendeu para o (a) <%= User.find(vendas.cliente).nome %></p>
+        <p id="conteudo">
+            <%= vendas.produto.descricao%>
+        </p>
+
+    </div>
+    <div id="sub-caixa2">
+        <img id="foto" src=" <%= compra.produto.foto%>" width="62px">
+        <a style="color:#000;" id="cancelar" class="btn success" href="#">R$  <%= vendas.produto.preco%></a>
+        <!-- <a style="color:#000;" id="cancelar" class="btn danger" href="#">Cancelar</a> -->
+    </div>
+ </div>
+<% end %>
+<% content_for :titulo, render(:partial => 'shared/titulo') %>
+<% content_for :rodape, render(:partial => 'shared/rodape') %>

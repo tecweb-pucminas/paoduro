@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  produto: 
+  user: 
+  data_compra: 2011-11-20 23:38:06
+  status: false
+
+two:
+  produto: 
+  user: 
+  data_compra: 2011-11-20 23:38:06
+  status: false

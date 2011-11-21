@@ -1,0 +1,4 @@
+class Compra < ActiveRecord::Base
+  belongs_to :produto
+
+end

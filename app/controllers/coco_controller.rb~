@@ -1,0 +1,2 @@
+class CocoController < ApplicationController
+end

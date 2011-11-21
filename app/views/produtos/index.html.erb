@@ -1,0 +1,24 @@
+<h1>Produtos</h1>
+<table class="zebra-striped">
+ <thead>
+  <tr>
+    <th>Foto</th>
+    <th>Descricao</th>
+    <th>Preco</th>
+    <th>Vendido</th>
+    <th>Ação</th>
+  </tr>
+</thead>
+ <tbody>
+<% @produtos.each do |produto| %>
+  <tr>
+    <td><%= image_tag produto.foto, :width => '64px' %></td>
+    <td><%= link_to produto.descricao, produto %></td>
+    <td><%= produto.preco %></td>
+    <td><%= produto.status %></td>
+    <td><%= link_to 'Deletar', produto, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+ </tbody>
+</table>
+<br /><%= link_to 'Novo Produto', new_produto_path, :class => 'btn primary' %>

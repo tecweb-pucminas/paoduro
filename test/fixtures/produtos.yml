@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  preco: 9.99
+  foto: MyString
+  descricao: MyString
+  user: 
+  status: false
+
+two:
+  preco: 9.99
+  foto: MyString
+  descricao: MyString
+  user: 
+  status: false

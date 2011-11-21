@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <%= image_tag @produto.foto %>
+</p>
+
+<p>
+  <b>Preco:</b>
+  <%= @produto.preco %>
+</p>
+
+<p>
+  <b>Descricao:</b>
+  <%= @produto.descricao %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @produto.user %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @produto.status %>
+</p>
+
+
+<%= link_to 'Voltar', new_compra_path unless current_user.id == @produto.user_id %>
+<%= link_to 'Edit', edit_produto_path(@produto) if current_user.id == @produto.user_id %> |
+<%= link_to 'Back', produtos_path %>

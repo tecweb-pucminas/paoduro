@@ -1,0 +1,23 @@
+<h1>Compras</h1>
+<table class="zebra-striped">
+<thead>
+  <tr>
+    <th>Produto</th>
+    <th>De: </th>
+    <th>Data compra</th>
+    <th></th>
+  </tr>
+</thead>
+<tbody>
+<% @compras.each do |compra| %>
+  <tr>
+    <td><%= image_tag compra.produto.foto, :width => '64px' %></td>
+    <td><%= compra.user.nome %></td>
+    <td><%= compra.created_at %></td>
+    <td><%= link_to 'Destroy', compra, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</tbody>
+</table>
+<br />
+<%= link_to 'Nova Compra', new_compra_path, :class => 'btn primary' %>

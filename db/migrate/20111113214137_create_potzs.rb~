@@ -1,0 +1,11 @@
+class CreatePotzs < ActiveRecord::Migration
+  def change
+    create_table :potzs do |t|
+      t.int :cupom
+      t.references :user
+
+      t.timestamps
+    end
+    add_index :potzs, :user_id
+  end
+end

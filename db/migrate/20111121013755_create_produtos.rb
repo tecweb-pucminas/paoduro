@@ -1,0 +1,14 @@
+class CreateProdutos < ActiveRecord::Migration
+  def change
+    create_table :produtos do |t|
+      t.decimal :preco
+      t.string :foto
+      t.string :descricao
+      t.references :user
+      t.boolean :status
+
+      t.timestamps
+    end
+    add_index :produtos, :user_id
+  end
+end
